@@ -13,7 +13,7 @@ public class CheckoutService {
     private final PaymentProcessorRegistry registry;
     private final String defaultProviderId;
 
-    public CheckoutService(PaymentProcessorRegistry registry, @Value("$payment.default:stripe") String defaultProviderId) {
+    public CheckoutService(PaymentProcessorRegistry registry, @Value("${payment.default:stripe}") String defaultProviderId) {
         this.registry = registry;
         this.defaultProviderId = defaultProviderId;
     }

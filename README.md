@@ -199,14 +199,33 @@ uber-payments-platform-spi-pattern/
 ```
 GET - http://localhost:8080/api/providers
 
---- Returns all providers ---
+Output -
+
+[
+    {
+        "id": "stripe",
+        "name": "Stripe (simulated)"
+    },
+    {
+        "id": "paypal",
+        "name": "Paypal (Simulated)"
+    }
+]
+
 ```
 
 
 ```
 POST - http://localhost:8080/api/checkout?orderId=ord123&amount=30&currency=USD&providerId=stripe
 
---- Processer payment using StripePaymentProcessor ---
+output -
+
+{
+    "success": true,
+    "transactionId": "tx-stripe_1762088902141",
+    "message": "Stripe Payment processed successfully"
+}
+
 ```
 
 ---
