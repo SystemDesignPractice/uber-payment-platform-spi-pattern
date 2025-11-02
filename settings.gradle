@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "uber-payments-platform-spi-pattern"
+
+include("core", "stripe-payment", "paypal-payment", "app")
+
